@@ -4,9 +4,9 @@ import { galleryItems } from './gallery-items.js';
 const gallery = document.querySelector(`.gallery`);
 
 const markup = galleryItems
-    .map((image) => `<a class="gallery__item" href="${image.original}">
+    .map((image) => `<li><a class="gallery__item" href="${image.original}">
   <img class="gallery__image" src="${image.preview}" alt="${image.description}" />
-</a>`)
+</a></li>`)
     .join("");
 
 gallery.innerHTML = markup;

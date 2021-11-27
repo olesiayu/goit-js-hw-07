@@ -37,9 +37,10 @@ const instance = basicLightbox.create(`
 
   instance.show()
   
-  document.addEventListener('keydown', function(e) {
-if (e.code === 'Escape') {
+  document.addEventListener('keydown', (event) => {
+if (event.code === 'Escape') {
 instance.close()
 }
-});
+  });
+  document.removeEventListener('keydown', (event));
 }
